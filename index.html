@@ -1,28 +1,20 @@
----
-layout: default
----
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title }}</title>
+    <title>My Journal Papers</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2 { color: #333; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin: 5px 0; }
+    </style>
 </head>
 <body>
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
-
-    <h2>Available Papers</h2>
-    <ul>
-    {% assign base_url = "/" %}
-    {% for file in site.static_files %}
-        {% if file.path contains "papers/" %}
-            <li>
-                <a href="{{ base_url }}{{ file.path }}">{{ file.name }}</a>
-            </li>
-        {% endif %}
-    {% endfor %}
-    </ul>
+    <h1>Journal Papers</h1>
+    <p>Click on the links below to access the papers.</p>
+<ul><li><strong>EVPFFT</strong><ul><li><a href="Hydrogen_Journals/EVPFFT/An elasto-viscoplastic formulation based on fast Fourier transforms for the prediction of micromechanical fields in polycrystalline materials-lebensohn2012.pdf">An elasto-viscoplastic formulation based on fast Fourier transforms for the prediction of micromechanical fields in polycrystalline materials-lebensohn2012.pdf</a></li></ul></li></ul>
 </body>
 </html>
