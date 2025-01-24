@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +13,15 @@ layout: default
     <h1>{{ site.title }}</h1>
     <p>{{ site.description }}</p>
 
-    <h2>Files</h2>
+    <h2>Available Papers</h2>
     <ul>
+    {% assign base_url = "/" %}
     {% for file in site.static_files %}
-        <li><a href="{{ file.path }}">{{ file.name }}</a></li>
+        {% if file.path contains "papers/" %}
+            <li>
+                <a href="{{ base_url }}{{ file.path }}">{{ file.name }}</a>
+            </li>
+        {% endif %}
     {% endfor %}
     </ul>
 </body>
