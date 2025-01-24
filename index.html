@@ -1,12 +1,22 @@
+---
+layout: default
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>{{ site.title }}</title>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is hosted on GitHub Pages!</p>
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+
+    <h2>Files</h2>
+    <ul>
+    {% for file in site.static_files %}
+        <li><a href="{{ file.path }}">{{ file.name }}</a></li>
+    {% endfor %}
+    </ul>
 </body>
 </html>
